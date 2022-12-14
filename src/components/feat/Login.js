@@ -5,7 +5,6 @@ import CryptoJS from "crypto-js";
 import { Stack, Button, Alert } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import { TextField } from "formik-mui";
-// import { InputField } from "components/styled/InputField";
 
 import { getUser111 } from "api/user";
 
@@ -18,7 +17,6 @@ const Login = () => {
   const sha256 = CryptoJS.SHA256;
 
   const handleSubmit = async (values) => {
-    //    let token: string = "";
     const user = await getUser111().then((data) => data.data.results[0].login);
 
     const hashedPassword = sha256(values.password + user.salt).toString();

@@ -1,11 +1,11 @@
 import React from "react";
 import { Stack, Typography, Paper } from "@mui/material";
 
-import Login from "components/page/Login";
+import Login from "components/feat/Login";
 
 import background from "./background.svg";
 
-const main = () => {
+const Main = () => {
   return (
     <Stack
       justifyContent="center"
@@ -33,4 +33,4 @@ const main = () => {
   );
 };
 
-export default main;
+export default Main;
