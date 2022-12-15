@@ -3,8 +3,6 @@ import { Stack, Typography, Paper } from "@mui/material";
 
 import Login from "components/feat/Login";
 
-import background from "./background.svg";
-
 const Main = () => {
   return (
     <Stack
@@ -15,7 +13,7 @@ const Main = () => {
         minHeight: "100vh",
         backgroundSize: "cover",
         alignItems: "center",
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/background.svg)`,
       }}
     >
       <Paper sx={{ p: 2, mb: 14.5 }}>

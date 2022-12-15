@@ -42,7 +42,11 @@ const FriendList = ({ data, onClick }) => {
                 }}
               />
               <Box sx={{ alignSelf: "center", ml: 2 }}>
-                <Typography variant="body2" color="text.secondary">
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ fontWeight: "bold" }}
+                >
                   {value.name.first} {value.name.last}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
