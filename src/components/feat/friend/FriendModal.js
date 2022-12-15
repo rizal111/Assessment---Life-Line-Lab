@@ -23,7 +23,6 @@ const FriendModal = ({ openThis }) => {
 
   useEffect(() => {
     openThis.current = (value) => {
-      console.log(value);
       setData(value);
       setOpen(true);
     };
