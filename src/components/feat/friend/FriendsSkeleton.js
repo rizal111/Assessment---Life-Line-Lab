@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Skeleton, Box, Card, Stack } from "@mui/material";
+import { Skeleton, Card, Stack } from "@mui/material";
 
 export default function FriendsSkeleton() {
   return (

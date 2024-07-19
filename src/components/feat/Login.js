@@ -19,6 +19,8 @@ const Login = () => {
   const handleSubmit = async (values) => {
     const user = await getUser111().then((data) => data.data.results[0].login);
 
+    console.log(user)
+
     const hashedPassword = sha256(values.password + user.salt).toString();
 
     if (values.username === user.username && hashedPassword === user.sha256)

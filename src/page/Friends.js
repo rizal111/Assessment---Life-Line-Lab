@@ -3,8 +3,6 @@ import { Stack, Typography, Box } from "@mui/material";
 import {
   useQuery,
   useQueryClient,
-  QueryClient,
-  QueryClientProvider,
 } from "@tanstack/react-query";
 
 import Pagination from "components/base/Pagination";
@@ -16,8 +14,6 @@ import { getFriends } from "api/friends";
 const Friends = () => {
   const [page, setPage] = useState(1);
 
-  const [friends, setFriends] = useState([]);
-
   const queryClient = useQueryClient();
 
   const friendModal = useRef(null);
@@ -25,11 +21,11 @@ const Friends = () => {
   const maxPage = 500;
 
   const fetchFriends = async (page) => {
-    const { data } = await getFriends({ page, total: 25 });
+    const { data } = await getFriends({ page, total: 27 });
     return data.results;
   };
 
-  const { status, data, error, isFetching, isPreviousData, isLoading } =
+  const { status, data, error, isPreviousData, isLoading } =
     useQuery({
       queryKey: ["friends", page],
       queryFn: () => fetchFriends(page),
